@@ -70,6 +70,7 @@ public class AgentDetailsUDTF extends GenericUDTF{
 		//this.forward(fwdObj);		
 	}
 	
+	
 	@Override
 	public void close() throws HiveException {
 		forward(fwdObj);		
