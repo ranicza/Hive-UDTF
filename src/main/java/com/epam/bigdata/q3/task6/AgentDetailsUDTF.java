@@ -66,8 +66,7 @@ public class AgentDetailsUDTF extends GenericUDTF{
 		fwdObj[2] = ua.getBrowser() != null ? ua.getOperatingSystem().getName() : null;
 		// Device		
 		fwdObj[3] = ua.getBrowser() != null ? ua.getOperatingSystem().getDeviceType().getName() : null;
-
-		//this.forward(fwdObj);		
+	
 	}
 	
 	
