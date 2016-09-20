@@ -67,15 +67,11 @@ public class AgentDetailsUDTF extends GenericUDTF{
 		// Device		
 		fwdObj[3] = ua.getBrowser() != null ? ua.getOperatingSystem().getDeviceType().getName() : null;
 
-		this.forward(fwdObj);
-		
+		//this.forward(fwdObj);		
 	}
 	
 	@Override
 	public void close() throws HiveException {
 		forward(fwdObj);		
 	}
-
-
-
 }
