@@ -3,6 +3,7 @@ package com.epam.bigdata.q3.task6;
 import java.util.ArrayList;
 
 import org.apache.hadoop.hive.ql.metadata.HiveException;
+import org.apache.hadoop.hive.ql.udf.UDFType;
 import org.apache.hadoop.hive.ql.udf.generic.GenericUDTF;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
@@ -12,7 +13,7 @@ import org.apache.hadoop.hive.serde2.objectinspector.StructObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
 
 import eu.bitwalker.useragentutils.UserAgent;
-
+@UDFType(deterministic=true)
 public class AgentDetailsUDTF extends GenericUDTF{
 
 	private static final String UA_TYPE = "UA_TYPE";
