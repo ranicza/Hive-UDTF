@@ -16,9 +16,9 @@ import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectIn
 import eu.bitwalker.useragentutils.UserAgent;
 @UDFType(deterministic = true)
 @Description(
-        name="uaDetails",
-        value="Parse user-agent string into separate fields. v.1.2.",
-        extended="Adds UA_TYPE, UA_FAMILY, OS_NAME, DEVICE based on user-agent."
+        name="user agent parser",
+        value="Parse user-agent string into params",
+        extended="Adds UA_TYPE, UA_FAMILY, OS_NAME, DEVICE based on user-agent"
 )
 public class AgentDetailsUDTF extends GenericUDTF{
 
@@ -74,11 +74,12 @@ public class AgentDetailsUDTF extends GenericUDTF{
 		// Device		
 		fwdObj[3] = ua.getBrowser() != null ? ua.getOperatingSystem().getDeviceType().getName() : null;
 	
+		forward(fwdObj);
 	}
 	
 	
 	@Override
 	public void close() throws HiveException {
-		forward(fwdObj);		
+				
 	}
 }
