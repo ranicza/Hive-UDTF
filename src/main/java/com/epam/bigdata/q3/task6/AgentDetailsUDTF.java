@@ -16,9 +16,8 @@ import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectIn
 import eu.bitwalker.useragentutils.UserAgent;
 @UDFType(deterministic = true)
 @Description(
-        name="user agent parser",
-        value="Parse user-agent string into params",
-        extended="Adds UA_TYPE, UA_FAMILY, OS_NAME, DEVICE based on user-agent"
+        name="uaDetails",
+        value="Returns parsed params from user agent: UA_TYPE, UA_FAMILY, OS_NAME, DEVICE"
 )
 public class AgentDetailsUDTF extends GenericUDTF{
 
